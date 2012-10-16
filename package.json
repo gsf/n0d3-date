@@ -1,0 +1,12 @@
+{
+  "name": "n0d3-date",
+  "version": "0.0.0",
+  "description": "Date plugin for n0d3",
+  "homepage": "https://github.com/gsf/n0d3-date",
+  "author" : "Gabriel Farrell <g@grrawr.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gsf/n0d3-date.git"
+  },
+  "main": "date.js"
+}
