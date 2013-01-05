@@ -1,8 +1,18 @@
-module.exports = function date (room, log) {
-  room.on('command', function (message) {
-    if (message.indexOf('date') != -1) {
-      room.say(new Date());
-      log('You asked for the time and I told you');
+module.exports = function date (client) {
+  client.on('.date', function (command) {
+    var date = new Date();
+    switch (command.text) {
+      case 'iso':
+        command.reply(date.toISOString());
+        break;
+      case 'date':
+        command.reply(date.toDateString());
+        break;
+      case 'time':
+        command.reply(date.toTimeString());
+        break;
+      default:
+        command.reply(date);
     }
   });
 };
